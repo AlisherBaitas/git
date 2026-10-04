@@ -12,7 +12,13 @@ import (
 )
 
 func main() {
-	out, err := exec.Command("git", "log", "--pretty=format:%ad|%s", "--date=short").Output()
+	repo := "."
+	if len(os.Args) > 1 {
+		repo = os.Args[1]
+	}
+
+	out, err := exec.Command("git", "-C", repo, "log", "--pretty=format:%ad|%s", "--date=short").Output()
+
 	if err != nil {
 		fmt.Fprintln(os.Stderr, "cannot read git log:", err)
 		os.Exit(1)
