@@ -1,4 +1,3 @@
 # git
 
-Learning repository for git basics. Changed on the main branch.
-
+Learning repository for git basics. Changed on both main and readme-update branches, conflict resolved.
