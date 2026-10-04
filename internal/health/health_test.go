@@ -18,6 +18,9 @@ func TestScoreMessage(t *testing.T) {
 		{"wip", 0},
 		{"addition: something", 0},
 		{"", 0},
+		{"fix: typo in README, again", 3},
+		{"update: (workflow) section text", 3},
+		{"fix: 123 456", 2},
 	}
 	for _, c := range cases {
 		if got := ScoreMessage(c.msg); got != c.want {
