@@ -22,6 +22,17 @@ go run .
 
 It reads `git log --pretty=format:"%ad|%s" --date=short` and prints the number of commits, the span in days, the commit cadence, the average message score out of 3 and a history label (`tidy`, `acceptable` or `messy`).
 
+Example output for this repository:
+
+```
+=== Repo Health ===
+Commits: 21
+Span: 1 days
+Cadence: 21.00 commits/day
+Average message score: 3.0 / 3
+History: tidy
+```
+
 Each commit message gets one point for each rule:
 
 - it has 3 or more words;
@@ -59,6 +70,17 @@ go run .
 ```
 
 Программа читает `git log --pretty=format:"%ad|%s" --date=short` и выводит число коммитов, период в днях, частоту коммитов (cadence), средний балл сообщений из 3 и итоговую метку истории (`tidy`, `acceptable` или `messy`).
+
+Пример вывода для этого репозитория:
+
+```
+=== Repo Health ===
+Commits: 21
+Span: 1 days
+Cadence: 21.00 commits/day
+Average message score: 3.0 / 3
+History: tidy
+```
 
 Каждое сообщение коммита получает по одному баллу за каждое правило:
 
